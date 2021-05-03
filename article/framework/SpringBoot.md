@@ -13,3 +13,16 @@ spring.datasource.password=password
 spring.jpa.database-platform=org.hibernate.dialect.H2Dialect
 ```
 
+## running it
+To first run the spring boot implementation, we'll compile it to a jar:
+`./mvnw clean package`
+`java -jar spring-boot-0.0.1-SNAPSHOT.jar`
+
+First, note the startup time (from the startup logs):
+`Started Application in 8.332 seconds (JVM running for 8.758)`
+
+Then, we'll look at the memory consumption (in kb):
+`ps x -o rss,vsz,command | grep spring`
+`544984 25725776 java -jar spring-boot-0.0.1-SNAPSHOT.jar`
+
+That are 500MB of RAM taken for the simplest possible MVC application I can think of!
