@@ -28,7 +28,7 @@ public class PostNewJokeTests {
     void postingNewJoke_createsItInRepository() throws Exception {
         String randomJoke = RandomStringUtils.randomAlphabetic(200);
 
-        mockMvc.perform(post("/")
+        mockMvc.perform(post("/joke")
                 .content(randomJoke)
                 .contentType(MediaType.TEXT_PLAIN))
                 .andReturn();

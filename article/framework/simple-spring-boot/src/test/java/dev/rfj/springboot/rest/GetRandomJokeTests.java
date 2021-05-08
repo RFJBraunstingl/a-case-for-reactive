@@ -31,7 +31,7 @@ public class GetRandomJokeTests {
         String expectedJoke = RandomStringUtils.randomAlphabetic(200);
         jokeRepository.save(JokeEntity.forJoke(expectedJoke));
 
-        MvcResult result = mockMvc.perform(get("/"))
+        MvcResult result = mockMvc.perform(get("/joke"))
                 .andExpect(status().isOk())
                 .andReturn();
 
