@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.concurrent.ThreadLocalRandom;
 
 @RestController
-@RequestMapping("/joke")
+@RequestMapping("/api/joke")
 public class JokeController {
 
     private final JokeRepository jokeRepository;

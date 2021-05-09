@@ -30,7 +30,7 @@ public class JokeResourceTest {
     @Test
     public void whenGettingJokeResource_randomJokeIsReturned() {
         given()
-                .when().get("/joke")
+                .when().get("/api/joke")
                 .then()
                 .statusCode(200)
                 .body(is(randomJoke));
@@ -40,7 +40,7 @@ public class JokeResourceTest {
     void whenPostingToResource_jokeIsStoredInRepository() {
         given()
                 .body(randomJoke)
-                .when().post("/joke")
+                .when().post("/api/joke")
                 .then().statusCode(201);
 
         verifyOnce(jokeRepository).save(randomJoke);

@@ -6,7 +6,7 @@ info:
 servers:
   - url: 'http://localhost:8080'
 paths:
-  /joke:
+  /api/joke:
     get:
       summary: display a random joke to the user
       security: [] # none means we'll allow anonymous access to this resource
