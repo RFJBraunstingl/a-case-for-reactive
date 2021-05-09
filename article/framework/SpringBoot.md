@@ -24,5 +24,6 @@ First, note the startup time (from the startup logs):
 Then, we'll look at the memory consumption (in kb):
 `ps x -o rss,vsz,command | grep spring`
 `544984 25725776 java -jar spring-boot-0.0.1-SNAPSHOT.jar`
+` 76068  5844720 node /Users/rfj/code/blog/a-case-for-reactive/article/framework/simple-next-app/node_modules/.bin/next start`
 
 That are 500MB of RAM taken for the simplest possible MVC application I can think of!

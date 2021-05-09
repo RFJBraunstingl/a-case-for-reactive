@@ -16,7 +16,7 @@
 Factors to compare:
 - reactive vs. non-reactive
 - JVM vs. native
-- spring vs. quarkus
+- spring vs. quarkus vs. node / nextjs
 
 More comparisons:
 - PostgreSQL vs. NoSQL
