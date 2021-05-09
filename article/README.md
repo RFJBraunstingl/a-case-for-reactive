@@ -36,3 +36,5 @@ links:
 - https://locust.io/
 - https://micronaut.io/
 - nextjs
+- https://spring.io/reactive
+- https://spring.io/guides/gs/reactive-rest-service/
