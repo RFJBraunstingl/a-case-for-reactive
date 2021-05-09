@@ -6,10 +6,13 @@
 ### [Programing Style]()
 
 ## ToDo
-- add simple Quarkus implementation and compare results without load
-- add locust tests and test resource consumption under load
-- add reactive spring implementation and compare results
-- add reactive quarkus implementation and compare results
+- add simple Quarkus implementation - O.K.
+- add simple node implementation (nextjs) - O.K.
+- add reactive spring implementation
+- add reactive Quarkus implementation
+- compare results without load
+- add load tests with locust
+- compare results under load
 - compile quarkus to native and compare results
 - test spring native resource consumption
 
@@ -20,8 +23,7 @@ Factors to compare:
 
 More comparisons:
 - PostgreSQL vs. NoSQL
-- MongoDB vs. Cassandra
-- Redis?
+- MongoDB vs. Redis?
 - Micronaut?
 
 links:
@@ -33,3 +35,4 @@ links:
 - https://projectlombok.org/setup/maven
 - https://locust.io/
 - https://micronaut.io/
+- nextjs
