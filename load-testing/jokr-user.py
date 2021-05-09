@@ -10,4 +10,6 @@ class QuickstartUser(HttpUser):
 
     @task
     def write_new_joke(self):
-        self.client.post("/api/joke", "a new joke")
+        self.client.post("/api/joke", data="a new joke", headers={
+            "Content-Type": "text/plain"
+        })
