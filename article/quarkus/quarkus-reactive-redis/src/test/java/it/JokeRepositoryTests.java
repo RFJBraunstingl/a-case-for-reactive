@@ -16,10 +16,10 @@ public class JokeRepositoryTests {
     JokeRepository jokeRepository;
 
     @Test
-    void creatingJoke_increasesCount() {
+    void creatingJoke_increasesCount() throws InterruptedException {
         long oldCount = jokeRepository.getCount();
 
-        jokeRepository.save(randomAlphabetic(500));
+        jokeRepository.save(randomAlphabetic(500)).await().indefinitely();
 
         assertEquals(oldCount + 1, jokeRepository.getCount());
     }
@@ -31,16 +31,17 @@ public class JokeRepositoryTests {
     }
 
     @Test
-    void countIsCalculatedCorrectly() {
+    void countIsCalculatedCorrectly() throws InterruptedException {
         jokeRepository.deleteAll();
+        Thread.sleep(100);
 
-        jokeRepository.save(randomAlphabetic(200));
+        jokeRepository.save(randomAlphabetic(200)).await().indefinitely();
         assertEquals(1, jokeRepository.getCount());
 
-        jokeRepository.save(randomAlphabetic(200));
+        jokeRepository.save(randomAlphabetic(200)).await().indefinitely();
         assertEquals(2, jokeRepository.getCount());
 
-        jokeRepository.save(randomAlphabetic(200));
+        jokeRepository.save(randomAlphabetic(200)).await().indefinitely();
         assertEquals(3, jokeRepository.getCount());
     }
 
@@ -49,9 +50,9 @@ public class JokeRepositoryTests {
         jokeRepository.deleteAll();
 
         String randomJoke = randomAlphabetic(200);
-        jokeRepository.save(randomJoke);
+        jokeRepository.save(randomJoke).await().indefinitely();
 
-        assertEquals(randomJoke, jokeRepository.randomJoke());
+        assertEquals(randomJoke, jokeRepository.randomJoke().await().indefinitely());
     }
 
     @Test
@@ -59,15 +60,15 @@ public class JokeRepositoryTests {
         String randomJoke1 = randomAlphabetic(200);
         String randomJoke2 = randomAlphabetic(200);
 
-        jokeRepository.save(randomJoke1);
-        jokeRepository.save(randomJoke2);
+        jokeRepository.save(randomJoke1).await().indefinitely();
+        jokeRepository.save(randomJoke2).await().indefinitely();
 
         long returnCountJoke1 = 0;
         long returnCountJoke2 = 0;
 
         int numberOfRequests = 100;
         for (int i = 0; i < numberOfRequests; i++) {
-            String returnedJoke = jokeRepository.randomJoke();
+            String returnedJoke = jokeRepository.randomJoke().await().indefinitely();
 
             if (returnedJoke.equals(randomJoke1)) {
                 returnCountJoke1++;
@@ -78,7 +79,7 @@ public class JokeRepositoryTests {
             }
         }
 
-        int toleranceDelta = 15;
+        int toleranceDelta = 5;
         int numberOfJokes = 2;
         int ideal = numberOfRequests / numberOfJokes;
         int expectedMin = ideal - toleranceDelta;
