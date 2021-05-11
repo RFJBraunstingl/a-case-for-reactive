@@ -1,2 +1,2 @@
 rm *.csv
-rm mem.log
+rm memtest.log
