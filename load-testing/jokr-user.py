@@ -2,7 +2,7 @@ from locust import HttpUser, task, between
 
 
 class QuickstartUser(HttpUser):
-    wait_time = between(0.2, 0.3)
+    wait_time = between(0.02, 0.03)
 
     @task(10)
     def read_random_joke(self):
