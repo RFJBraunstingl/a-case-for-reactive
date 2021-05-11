@@ -1,6 +1,8 @@
 package dev.rfj.springreactiveredis.it;
 
 import dev.rfj.springreactiveredis.data.JokeRepository;
+import org.apache.commons.lang3.RandomStringUtils;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -12,11 +14,17 @@ public class JokeRepositoryTests {
 
     @Autowired
     JokeRepository jokeRepository;
+    private String randomJoke;
+
+    @BeforeEach
+    void setUp() {
+        randomJoke = RandomStringUtils.randomAlphabetic(200);
+    }
 
     @Test
     void deleteAllWorks() {
 
-        jokeRepository.save("a random joke").block();
+        jokeRepository.save(randomJoke).block();
 
         jokeRepository.deleteAll().block();
 
@@ -28,7 +36,7 @@ public class JokeRepositoryTests {
 
         long oldCount = jokeRepository.count().block();
 
-        jokeRepository.save("a new joke").block();
+        jokeRepository.save(randomJoke).block();
 
         assertEquals(oldCount + 1, jokeRepository.count().block());
     }
@@ -38,8 +46,8 @@ public class JokeRepositoryTests {
 
         jokeRepository.deleteAll().block();
 
-        jokeRepository.save("a random joke").block();
+        jokeRepository.save(randomJoke).block();
 
-        assertEquals("a random joke", jokeRepository.random().block());
+        assertEquals(randomJoke, jokeRepository.random().block());
     }
 }
