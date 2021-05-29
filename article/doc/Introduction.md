@@ -44,4 +44,3 @@ because I figured to really come to promising conclusions, I need to try out all
 This article will be a comparison:
 - which framework to use (Spring Boot vs. Quarkus)
 - which programming style to use (is reactive worth the fuss)
-- which persistance to use (MongoDB vs. Cassandra vs. PostgreSQL)

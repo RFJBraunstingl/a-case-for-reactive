@@ -20,28 +20,27 @@ Here are some useful links and resources to explore the topics further.
 - https://www.youtube.com/user/SpringSourceDev  
   the spring youtube channel with loads of interesting content regarding Spring & Spring Boot
 
-### Further Reading
-- Cloud Native Java by Josh Long and Kenny Bastani (O'Reilly)
-
 ## Quarkus
 - https://quarkus.io/  
   the official website of the quarkus framework
 - https://code.quarkus.io/  
   a code generator to get started with a Quarkus project akin to the [spring initializr](https://start.spring.io/)
+- https://quarkus.io/quarkus-workshops/super-heroes/  
+  a splendid resource if you want to get started with Quarkus
 
-## Load testing
+## Other frameworks & tools
 - https://locust.io/  
   load-test your applications
 - https://github.com/rakyll/hey  
   a small tool for measuring service response times
-
-## Other frameworks
 - https://micronaut.io/  
-  a small Java framework for building web applications
+  a small Java framework for building web applications one might come across in the cloud landscape
 - https://vertx.io/  
   a framework maintained by the Eclipse Foundation for building reactive applications on the JVM
 
-links:
-- https://blogs.oracle.com/javamagazine/java-frameworks-for-the-cloud-establishing-the-bounds-for-rapid-startups
-- nextjs
-- https://projectlombok.org/setup/maven
+## Blogs & reading
+- https://blogs.oracle.com/javamagazine/java-frameworks-for-the-cloud-establishing-the-bounds-for-rapid-startups  
+  an interesting read about GraalVM startup times
+- Cloud Native Java by Josh Long and Kenny Bastani (O'Reilly)  
+  this book discusses cloud native concepts with Spring Boot
+  
