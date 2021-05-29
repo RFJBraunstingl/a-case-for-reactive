@@ -1,13 +1,18 @@
 # Framework
-Which framework to use for cloud native Java?
+Which framework to use for cloud native Java?  
+While there are more great pieces of Software out there (and probably more that I can ever know of) - I will focus on 
+the two particular frameworks I already got to know a bit while experimenting with Java in the Cloud:
+- Spring Boot and
+- Quarkus
 
-## the contestants
+Let's meet our contestants.
 
 ### Spring Boot
-Spring out to be _the_ dependency injection framework on the JVM.
-You surely do not need me to introduce it to you.  
+Spring out to be _the_ dependency injection framework on the JVM (in my mind at least).
+It's so well known that you surely do not need me to introduce it to you.  
 With Spring Boot, the Spring team went out of their way to make Spring interesting 
-for quick, cloud native, agile development.
+for quick, cloud native, agile development. Built on the battle tested Spring framework which is around
+in one form or another since the early 2000s, and with powerful corporate backing
 
 ### Quarkus
 Quarkus is still a kind of 'newcomer' framework (in my opinion at least).  
