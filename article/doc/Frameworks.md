@@ -24,9 +24,9 @@ I do not doubt Redhat a second when they say it is production ready although it'
 1.13.3 (march 2021), but kind of a lot of features are in experimental / beta mode 
 (like the cassandra driver).
 
-Quarkus is an implementation of the Eclipse Microprofile specification,
-which is the attempt to define a subset of the JEE spec needed for cloud native 
-project. 
+Quarkus is an implementation of the Eclipse Microprofile specification, built upon the Eclipse 
+Foundation's project [vert.x](https://vertx.io/) which in itself has the goal of bringing reactive 
+programming into the JVM.
 
 Quarkus prides itself on being _the_ Java Framework developed for the 
 cloud, because of it's many integrations (i.e. are JIB, Kubernetes and OpenShift extensions).
@@ -36,15 +36,13 @@ The goal of the smallest possible memory footprint as well as the least possible
 developed using Quarkus even suitable to be run in Serverless environments, such as AWS Lambda functions, due to
 their minimal startup time.
 
-Quarkus was actually built upon the Eclipse Foundation's project [vert.x](https://vertx.io/) which in itself
-has the goal of bringing reactive programming into the JVM.
-
 ### NextJS
 When talking about reactive programming, I felt obligated to include NodeJS in the mix
 because the reactive concepts such as the event loop have been supported by Node before 
 they were cool.
 
-The Quarkus Framework even acknowledged 
+In particular with the whole trend going towards Serverless, NodeJS is becoming a big player for programming
+the cloud (followed by python and then Java - [according to newrelic](https://newrelic.com/resources/ebooks/serverless-benchmark-report-aws-lambda-2020)).
 
-## links
-- https://blogs.oracle.com/javamagazine/java-frameworks-for-the-cloud-establishing-the-bounds-for-rapid-startups
+Because I default to React when creating front end stuff, I chose a fullstack React Framework to enter
+as third contestant. Meet [NextJS](https://nextjs.org/) by [Vercel](https://vercel.com/).
