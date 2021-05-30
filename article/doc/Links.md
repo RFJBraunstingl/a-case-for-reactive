@@ -43,4 +43,5 @@ Here are some useful links and resources to explore the topics further.
   an interesting read about GraalVM startup times
 - Cloud Native Java by Josh Long and Kenny Bastani (O'Reilly)  
   this book discusses cloud native concepts with Spring Boot
-  
+- Vert.x in Action by Julien Ponge (Manning)  
+  discusses Vert.x, but also reactive programming concepts in general
